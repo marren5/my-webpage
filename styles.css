@@ -1,17 +1,22 @@
 /* styles.css */
 
+/* Ensure that the body and html elements take up the full height */
+html, body {
+  height: 100%; /* Full height for body and html */
+  margin: 0; /* Remove default margin */
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  
-    background-color: #f4f4f4;
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Stack children vertically */
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
   }
   
   header {
     background-color: #333;
     color: #fff;
-    padding: 15px;
+    padding: 15px 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,22 +26,26 @@ body {
   .header-images {
     display: inline-block; /* Allow images to be inline */
     position: absolute;
-    left: 0;
+    left: 30px;
     top: 50%;
     transform: translateY(-50%); /* Center vertically */
   }
 
   .logo {
     display: inline-block;
-    width: 40px; /* Adjust size for the logo */
+    width: 80px; /* Adjust size for the logo */
     height: auto; /* Maintain aspect ratio */
     margin-right: 10px; /* Space between the logo and extra image */
   }
   
   .logo1 {
     display: inline-block;
-    width: 200px; /* Adjust size for the extra image */
+    width: 400px; /* Adjust size for the extra image */
     height: auto; /* Maintain aspect ratio */
+  }
+  nav {
+    flex-grow: 1; /* Allow the navigation to take up remaining space */
+    text-align: center; /* Center navigation items */
   }
 
   header h1 {
@@ -59,12 +68,54 @@ body {
     color: #fff;
     text-decoration: none;
   }
+  /* Search Button */
+  .search-container {
+    height: 100%; /* Matches the height of the header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px; /* Adjust padding as desired */
+  }
   
+  .search-button {
+    background-color: white;
+    border: none;
+    width: 50px; /* Width of the square, adjust as needed */
+    height: 50px; /* Square dimensions, matching the header height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+.search-button img {
+  width: 30px; /* Adjust icon size */
+  height: 30px;
+  margin-top: 8px;
+}
+
+
   main {
+    flex: 1; /* Allow main to grow and take available space */
     padding: 20px;
     text-align: center;
   }
-  
+
+  .image-container {
+    width: 100%; /* Full width of the main area */
+    max-width: 1200px; /* Set a maximum width as needed */
+    margin: 0 auto; /* Center the container */
+  }
+
+  .IndexBilde1 {
+    width: 100%; /* Makes the image span the full width of the container */
+    height: auto; /* Maintains the aspect ratio */
+    max-height: 400px; /* Set a max height if needed, adjust as desired */
+    object-fit: cover; /* Ensures the image covers the width without distortion */
+    margin-top: 20px; /* Space above the image, adjust as needed */
+  }
+
   footer {
     background-color: #333;
     color: #fff;
