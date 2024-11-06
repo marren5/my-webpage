@@ -25,12 +25,70 @@
   </header>
 
   <main>
-    <h2>Home Page</h2>
-    <p>This is the home page of my website.</p>
-
     <div class="image-container"></div>
-    <img src="images/IndexBilde1.png" alt="Description of the image" class="IndexBilde1" />
+    <img src="images/IndexBilde1.png" alt="Description of the image" class="IndexBilde1" /> <!-- Intro Bilde -->
   </div>
+<!-- Trying flex for content in main -->
+<div class="flex-wrapper">
+  <!-- 70% content area on the left -->
+  <div class="content-left">
+    <div class="content-box">
+      <h2>Hva lærer du?</h2>
+      <p>Bachelor i matematisk modellering og datavitenskap kobler sammen matematikk, informatikk, fysikk og statistikk.  
+        Du får innsikt i matematiske modeller som brukes i praktisk problemløsning blant annet i medisinsk kjemi, biologiske prosesser og ulike samfunnssystemer. 
+        Det første studieåret har du emner i blant annet matematikk, programmering, fysikk og kjemi for å få en felles forståelse av tematikken.
+        Det siste semesteret skriver du en bacheloroppgave tett knyttet til problemstillinger i arbeidslivet.
+        Første året velger du hvilken av disse spesialiseringene du vil ta.</p>
+    </div>
+    <div class="content-box">
+      <h2>Statistiske og datadrevne metoder</h2>
+      <p>Du lærer om hvordan du kan bruke målte data koblet med datadrevne og statistiske metoder til å gjøre beregninger, for eksempel av fremtidige strømpriser. <br>
+        Du lærer hvordan du kan løse komplekse og sammensatte problemer, og utforske høydimensjonale datatyper. Moderne metoder innen maskinlæring og kunstig intelligens står sentralt.</p>
+    </div>
+    
+    <!-- Add more content as needed -->
+    <div class="content-box">
+      <h2>Vitenskapelige beregninger</h2>
+      <p>Du lærer å lage effektive algoritmer, datastrukturer og kildekoder for å løse matematiske og fysiske problemer med numeriske metoder. <br>
+        Du lærer å utvikle kildekode og metodikk knyttet til medisinsk teknologi, biologiske prosesser og annet.
+        </p>
+    </div>
+    <div class="content-box">
+    <h2>Matematikk og fysikk</h2>
+      <p>Du utforsker algebraiske strukturer, blant annet knyttet til dyp læring og kunstig intelligens.<br>
+        Du lærer differensialgeometri på flater, gruppeteori og kodeteori; matematiske strukturer, representasjonsteori og kategoriteori.
+        I fysikk lærer du om termodynamikk og statistisk fysikk.
+      </p>
+      <p><a href="https://student.oslomet.no/en/studier/-/studieinfo/programplan/HINGMAMO/2024/HØST" target="_blank">Se programplan på student.oslomet.no</a>.</p>
+    </div>
+  </div>
+
+  <!-- 30% content area on the right for future content -->
+  <div class="content-right">
+    <!-- Reserved for future content -->
+    <div class="clickable-box" onclick="toggleContent(0)">
+      <h2>Opptakskrav og poeng</h2>
+  </div>
+  <div class="content" id="content1">
+      <p>
+        For å søke på dette programmet må du ha<br>
+        generell studiekompetanse (samordnaopptak.no) eller oppfylle kravene til realkompetanse<br>
+        matematikk R1 og R2<br>
+        fysikk 1<br>
+        Det kan være konkurranse om plassene. Ved forrige opptak kom alle kvalifiserte søkere inn.<br>
+        Hvis du mangler generell studiekompetanse eller enkelte fag fra videregående skole, kan du søke på dette studiet om du har bestått ettårig forkurs for ingeniørutdanning.</p>
+  </div>
+
+  <div class="clickable-box" onclick="toggleContent(1)">
+      <h2>Slik søker du</h2>
+  </div>
+  <div class="content" id="content2">
+      <h2>Content Slik søker du</h2>
+      <p>This is the content for the second box. It will be revealed when the box is clicked.</p>
+  </div>
+</div>
+<script src="script.js"></script>
+  <!-- End of Trying flex for content in main -->
   </main>
 
   <footer>

@@ -4,6 +4,7 @@
 html, body {
   height: 100%; /* Full height for body and html */
   margin: 0; /* Remove default margin */
+  overflow-x: hidden; 
 }
 
 body {
@@ -98,7 +99,7 @@ body {
 
   main {
     flex: 1; /* Allow main to grow and take available space */
-    padding: 20px;
+    padding: 10px;
     text-align: center;
   }
 
@@ -115,6 +116,101 @@ body {
     object-fit: cover; /* Ensures the image covers the width without distortion */
     margin-top: 20px; /* Space above the image, adjust as needed */
   }
+    
+  /* Flex wrapper to create the 70%-30% layout */
+.flex-wrapper {
+  display: flex;
+  max-width: 100%; /* Adjust as needed */
+  height: 100%;
+  margin: 0 auto; /* Center the layout */
+  justify-content: space-between;
+  box-sizing: border-box; 
+}
+
+/* Left section taking up 70% */
+.content-left {
+  flex: 0 0 60%;
+  padding: 30px;
+  background-color: #fff;
+}
+
+
+/* Styling for content within the left box */
+.content-box h2 {
+  font-size: 1.5rem;
+  color: #333;
+  text-align: left; /* Aligns all text to the left */
+}
+
+
+.content-box p {
+  font-family: Verdana, sans-serif;
+  font-size: 1rem;
+  color:#000;
+  text-align: left; /* Aligns all text to the left */
+  line-height: 2; /* Increase the line spacing between paragraphs */
+}
+/* hyperlink to oslo met study */
+a {
+  color: black; /* Blue color for the link */
+  text-decoration: underline; 
+  text-decoration-thickness: 3px;
+  text-decoration-color: black;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline; /* Adds an underline when the link is hovered */
+  text-decoration-thickness: 3px;
+  text-decoration-color: rgba(255, 221, 0, 0.85);
+
+}
+/* Right section taking up 30% */
+.content-right {
+  flex: 0 0 40%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.clickable-box {
+  background-color:  rgba(255, 221, 0, 0.85);/* Blue background for the clickable box */
+  color: black;
+  padding: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  width: 90%; 
+  box-sizing: border-box;
+  transition: background-color 0.3s ease; 
+}
+
+.clickable-box:hover {
+  background-color:  rgba(255, 221, 0, 1); /* Darker blue when hovered */
+}
+.clickable-box .content {
+  width: 90%; /* Ensure the content inside fills the box */
+  text-align: left; /* Aligns all text to the left */
+  line-height: 2;
+  padding: 10px;
+  box-sizing: border-box; /* Prevents overflow inside box */
+  display: none; /* Content is hidden initially */
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background color for content */
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.content p {
+  font-family: Verdana, sans-serif;
+  font-size: 1rem;
+  color:#000;
+  text-align: left; /* Aligns all text to the left */
+  line-height: 2; 
+}
+
+ /* END trying flex for main */
 
   footer {
     background-color: #333;
@@ -125,7 +221,7 @@ body {
     width: 100%;
     bottom: 0;
   }
-/* Grid Layout for Images */
+/* Grid Layout for Images in Activity Page*/
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
