@@ -169,7 +169,6 @@ a:hover {
 .content-right {
   flex: 0 0 40%;
   padding: 20px;
-  box-sizing: border-box;
 }
 
 .clickable-box {
@@ -180,47 +179,35 @@ a:hover {
   cursor: pointer;
   border-radius: 5px;
   text-align: center;
-  width: 90%; 
-  box-sizing: border-box;
-  transition: background-color 0.3s ease; 
+  width: 80%; 
 }
 
 .clickable-box:hover {
   background-color:  rgba(255, 221, 0, 1); /* Darker blue when hovered */
 }
-.clickable-box .content {
-  width: 90%; /* Ensure the content inside fills the box */
-  text-align: left; /* Aligns all text to the left */
-  line-height: 2;
-  padding: 10px;
-  box-sizing: border-box; /* Prevents overflow inside box */
-  display: none; /* Content is hidden initially */
+.content {
+  display: none; /* Hidden initially */
   padding: 20px;
-  background-color: #f8f9fa; /* Light background color for content */
-  margin-bottom: 20px;
+  background-color: #f8f9fa;
+  margin-top: 10px;
   border-radius: 5px;
   border: 1px solid #ddd;
+  width: 78%; 
+  text-align: left;
+  line-height: 2;
 }
 
+/* Styling for content text */
 .content p {
   font-family: Verdana, sans-serif;
   font-size: 1rem;
-  color:#000;
-  text-align: left; /* Aligns all text to the left */
-  line-height: 2; 
+  color: #000;
+  text-align: left;
+  line-height: 2;
+  line-height: 2;
 }
-
  /* END trying flex for main */
 
-  footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: static; /* so the lower grid boxes are not behind footer */
-    width: 100%;
-    bottom: 0;
-  }
 /* Grid Layout for Images in Activity Page*/
 .grid-container {
     display: grid;
@@ -277,4 +264,15 @@ a:hover {
   .image p {  /* under tekst for automated test*/
     font-size: 14px;
     color:#000;
+  }
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: static; /* so the lower grid boxes are not behind footer */
+    width: 100%;
+    bottom: 0;
+    
   }
