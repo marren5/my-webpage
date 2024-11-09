@@ -134,6 +134,24 @@ body {
   background-color: #fff;
 }
 
+/* Styling for table */
+table {
+  width: 100%; /* Full width of the container */
+  border-collapse: collapse; /* Merge table borders */
+  margin: 20px 0; /* Add some space above and below */
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd; /* Border around cells */
+  text-align: center; /* Center-align text */
+}
+
+th {
+  background-color: #333; /* Dark background for header */
+  color: white; /* White text for header */
+}
+
 
 /* Styling for content within the left box */
 .content-box h2 {
@@ -168,22 +186,23 @@ a:hover {
 /* Right section taking up 30% */
 .content-right {
   flex: 0 0 40%;
-  padding: 20px;
+  padding: 10px;
 }
 
 .clickable-box {
-  background-color:  rgba(255, 221, 0, 0.85);/* Blue background for the clickable box */
-  color: black;
-  padding: 15px;
+  background-color:  #333;/* Blue background for the clickable box */
+  color: rgba(255, 247, 0, 0.975);
+  padding: 4px;
   margin-bottom: 10px;
   cursor: pointer;
   border-radius: 5px;
   text-align: center;
-  width: 80%; 
+  width: 85%; 
 }
 
 .clickable-box:hover {
-  background-color:  rgba(255, 221, 0, 1); /* Darker blue when hovered */
+  background-color:  #334;
+  color: white;
 }
 .content {
   display: none; /* Hidden initially */
