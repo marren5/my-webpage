@@ -272,7 +272,7 @@ a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    margin: 20px;
+    margin: 15px;
   }
   .image p {  /* under tekst for automated test*/
     font-size: 14px;
