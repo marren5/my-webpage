@@ -148,8 +148,7 @@ th, td {
 }
 
 th {
-  background-color: #333; /* Dark background for header */
-  color: white; /* White text for header */
+  font-weight: bold;
 }
 
 
