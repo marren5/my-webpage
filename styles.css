@@ -231,9 +231,9 @@ a:hover {
   background-color:  #333;/* Blue background for the clickable box */
   color: rgba(255, 247, 0, 0.975);
   padding: 4px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 0;
   text-align: center;
   width: 85%; 
 }
