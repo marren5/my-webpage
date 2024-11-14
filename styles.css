@@ -100,7 +100,7 @@ body {
   main {
     flex: 1; /* Allow main to grow and take available space */
     padding: 10px;
-    text-align: center;
+    text-align: left; 
   }
 
   .image-container {
@@ -153,6 +153,8 @@ th {
 
 
 /* Styling for content within the left box */
+
+
 .content-box h2 {
   font-size: 1.5rem;
   color: #333;
@@ -167,6 +169,7 @@ th {
   text-align: left; /* Aligns all text to the left */
   line-height: 2; /* Increase the line spacing between paragraphs */
 }
+
 /* hyperlink to oslo met study */
 a {
   color: black; /* Blue color for the link */
