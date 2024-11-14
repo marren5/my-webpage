@@ -133,6 +133,14 @@ body {
   padding: 30px;
   background-color: #fff;
 }
+ /* Line between classes */
+.content-divider {
+  border: none;             /* Remove default border */
+  border-top: 2px solid #13786f;  /* Define the line's style, thickness, and color */
+  margin: 20px 0;           /* Space around the line */
+  width: 100%;              /* Set width to fit the container */
+}
+
 
 /* Styling for table */
 table {
@@ -170,13 +178,39 @@ th {
   line-height: 2; /* Increase the line spacing between paragraphs */
 }
 
+/* Adjust faglig leder */
+
+/* Style for the contact container to align image and text horizontally */
+.content-box.faglig-leder .contact-container {
+  display: flex;
+  align-items: center; /* Vertically align image and text */
+  gap: 20px; /* Space between the image and contact info */
+}
+
+/* Resize the contact image */
+.content-box.faglig-leder .contact-image {
+  width: 80px;  /* Resize the image */
+  height: auto; /* Keep aspect ratio */
+}
+
+/* Style for the contact info */
+.content-box.faglig-leder .contact-info table {
+  margin: 0;  /* Remove default margins */
+}
+
+/* Optional: Style the table for better readability */
+.content-box.faglig-leder .contact-info th, 
+.content-box.faglig-leder .contact-info td {
+  padding: 5px 10px;  /* Add some padding */
+  text-align: left;    /* Align text to the left */
+}
+
 /* hyperlink to oslo met study */
 a {
   color: black; /* Blue color for the link */
   text-decoration: underline; 
-  text-decoration-thickness: 3px;
+  text-decoration-thickness: 2px;
   text-decoration-color: black;
-  font-weight: bold;
 }
 
 a:hover {
@@ -185,7 +219,9 @@ a:hover {
   text-decoration-color: rgba(255, 221, 0, 0.85);
 
 }
+
 /* Right section taking up 30% */
+
 .content-right {
   flex: 0 0 40%;
   padding: 10px;
@@ -204,7 +240,7 @@ a:hover {
 
 .clickable-box:hover {
   background-color:  #334;
-  color: white;
+  color: rgb(141, 241, 231);
 }
 .content {
   display: none; /* Hidden initially */
@@ -230,6 +266,7 @@ a:hover {
  /* END trying flex for main */
 
 /* Grid Layout for Images in Activity Page*/
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

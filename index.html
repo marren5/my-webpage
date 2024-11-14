@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Index | My Website</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <header>
     <img src="images/logo.png" alt="Logo" class="logo" />
@@ -18,17 +20,23 @@
         <li><a href="activity.html">Activity</a></li>
       </ul>
     </nav>
+
     <!-- Search button -->
   <a href="#search-popup" class="search-button">
     <img src="images/search.png" alt="Search" />
   </a>
   </header>
 
+
   <main>
     <div class="image-container"></div>
     <img src="images/IndexBilde1.png" alt="Description of the image" class="IndexBilde1" /> <!-- Intro Bilde -->
   </div>
 
+  <!-- Horizontal line between content boxes -->
+<hr class="content-divider">
+
+<!-- Table with decsription of the program -->
   <div class="table-container">
     <table>
       <tbody>
@@ -60,8 +68,13 @@
     </table>
   </div>
 
+  <!-- Horizontal line between content boxes -->
+<hr class="content-divider">
+
 <!-- Trying flex for content in main -->
 <div class="flex-wrapper">
+
+  
   <!-- 70% content area on the left -->
 
   <div class="content-left">
@@ -86,6 +99,7 @@
         Du lærer å utvikle kildekode og metodikk knyttet til medisinsk teknologi, biologiske prosesser og annet.
         </p>
     </div>
+
     <div class="content-box">
     <h2>Matematikk og fysikk</h2>
       <p>Du utforsker algebraiske strukturer, blant annet knyttet til dyp læring og kunstig intelligens.<br>
@@ -94,6 +108,10 @@
       </p>
       <p><a href="https://student.oslomet.no/en/studier/-/studieinfo/programplan/HINGMAMO/2024/HØST" target="_blank">Se programplan på student.oslomet.no</a>.</p>
     </div>
+
+    <!-- Horizontal line between content boxes -->
+<hr class="content-divider">
+
     <div class="content-box">
       <h2>Hva kan du jobbe som?</h2>
       <p>Med dette studiet får du IT-kompetanse som er etterspurt i arbeidslivet, særlig om du velger spesialiseringene vitenskapelige beregninger eller statistiske og datadrevne metoder.<br><br>
@@ -102,6 +120,41 @@
         Datadrevne metoder og maskinlæring er i dag svært mye brukt i arbeidslivet.
         </p>
     </div>
+
+    <!-- Horizontal line between content boxes -->
+<hr class="content-divider">
+
+<div class="content-box">
+      <h2>Spørsmål om utdanningen?</h2>
+      <p><a href="https://www.oslomet.no/kontaktskjema#Jeg%20vil%20bli%20student">Har du spørsmål om utdanningen, kontakt oss gjennom vårt kontaktskjema.</a></p>
+    </div>
+
+
+    <div class="content-box faglig-leder">
+      <h2>Faglig leder</h2>
+      <div class="contact-container">
+        <img src="images/contact-image.jpeg" alt="Contact Image" class="contact-image" />
+        <span class="contact-info">
+          <table>
+            <tbody>
+              <tr>
+                <th><a href="https://www.oslomet.no/om/ansatt/krhel3944/">Kristoffer Herland Hellton </a></th>
+              </tr>
+              <tr>
+                <td>førsteamanuensis</td>
+              </tr>
+              <tr>
+                <td>+47 672 37 240 | kristoffer.hellton@oslomet.no</td>
+              </tr>
+            </tbody>
+          </table>
+        </span>
+      </div>
+    </div>
+
+    <!-- Horizontal line between content boxes -->
+<hr class="content-divider">
+
   </div>
 
   <!-- 30% content area on the right for future content -->
@@ -119,7 +172,7 @@
             <il> Fysikk 1</il> <br>
         </ul>
         Det kan være konkurranse om plassene. Ved forrige opptak kom alle kvalifiserte søkere inn.<br>
-        Hvis du mangler generell studiekompetanse eller enkelte fag fra videregående skole, kan du søke på dette studiet om du har<a href="https://www.oslomet.no/studier/tkd/forkurs-ingenior">bestått ettårig forkurs for ingeniørutdanning.</a></p>
+        Hvis du mangler generell studiekompetanse eller enkelte fag fra videregående skole, kan du søke på dette studiet om du har <a href="https://www.oslomet.no/studier/tkd/forkurs-ingenior"> bestått ettårig forkurs for ingeniørutdanning.</a></p>
   </div>
 
   <div class="clickable-box" onclick="toggleContent(1)">
@@ -131,11 +184,11 @@
           <il> 15. april: ordinær søknadsfrist </il> <br>
             <il> 1. mars: frist for enkelte søkere </il> <br>
         </ul>
-        <a href="https://www.oslomet.no/studier/soknad-og-opptak/opptak-til-bachelor-aarsstudier">Mer om å søke på bachelor.</a></p>
+        <a href="https://www.oslomet.no/studier/soknad-og-opptak/opptak-til-bachelor-aarsstudier">Mer om å søke på bachelor</a></p>
   </div>
 
   <div class="clickable-box" onclick="toggleContent(2)">
-    <h2>Hvordan foregår undervisningen?</h2>
+    <h2>Hvordan foregår undervisningen</h2>
 </div>
 <div class="content" id="content3">
     <p>Undervisningen er en kombinasjon av:<br>
@@ -154,34 +207,48 @@
 </div>
 
 <div class="clickable-box" onclick="toggleContent(3)">
-  <h2>Hva koster det?</h2>
+  <h2>Hva koster det</h2>
 </div>
 <div class="content" id="content4">
-  <p>Du betaler en semesteravgift hvert semester (student.oslomet.no). <br><br>
-    Er du internasjonal student fra utenfor EU og EØS, må du betale studieavgift (student.oslomet.no). Det er mulig å søke om unntak for betaling av denne studieavgiften.
+  <p> <a href="https://student.oslomet.no/en/web/student/semester-fee">Du betaler en semesteravgift hvert semester (student.oslomet.no).</a> <br><br>
+    <a href="https://student.oslomet.no/en/web/student/tuition-fees-for-international-students-from-outside-eu-eea">Er du internasjonal student fra utenfor EU og EØS, må du betale studieavgift (student.oslomet.no).</a> Det er mulig å søke om unntak for betaling av denne studieavgiften.
     </p>
 </div>
 
 <div class="clickable-box" onclick="toggleContent(4)">
-  <h2>Studiets oppbygging</h2>
+  <h2>Utveksling</h2>
 </div>
 <div class="content" id="content5">
-  <p> </p>
+  <p>Du kan dra på utveksling i femte semester.</p>
 </div>
 
 <div class="clickable-box" onclick="toggleContent(5)">
-  <h2>Utveksling</h2>
+  
+  <h2>Videre studiemuligheter ved OsloMet</h2>
 </div>
 <div class="content" id="content6">
-  <p>Du kan dra på utveksling i femte semester.</p>
+ <a href=https://www.oslomet.no/studier/tkd/anvendt-data-informasjonsteknologi target="_blank">
+  <table>
+    <caption>Anvendt data- og informasjonsteknologi (ACIT)</caption>
+    <tbody>
+      <tr>
+        <td>Masterprogram</td>
+        <td>2 år</td>
+        <td>Pilestredet i Oslo</td>
+        <td>Heltid</td>
+      </tr>
+    </tbody>
+  </table>
+  </a>
 </div>
 </div>
 <script src="script.js"></script>
-  <!-- End of Trying flex for content in main -->
-  </main>
 
-  <footer>
-    <p>&copy; 2024 My Website</p>
-  </footer>
+<!-- End of Trying flex for content in main -->
+</main>
+
+<footer>
+  <p>&copy; 2024 My Website</p>
+</footer>
 </body>
 </html>
