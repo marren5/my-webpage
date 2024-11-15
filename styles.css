@@ -306,15 +306,34 @@ a:hover {
 }
 
 .activity-page-wrapper .content-right .flex-item .text-box {
-  margin: 40px;
+  margin-top: 25px;
+  margin-bottom: 40px;
+  margin-left: 30px;
+  margin-right: 30px;
   font-size: 1rem;
   color: #555;
+  text-align: left;
 }
 
+.kart-container {
+  display: inline-block; /* Keeps the image and text as a block element */
+  text-align: center; /* Centers the text under the image */
+}
 
+.kart {
+  display: block; /* Ensures the image is on its own line */
+  width: 750px; /* Adjust size for the logo */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto; /* Center the image within the container */
+}
 
+.kart-text {
+  margin-top: 5px; /* Add some small spacing between the image and text */
+  font-size: 0.5rem; /* Adjust text size as needed */
+  font-family: Arial, Helvetica, sans-serif;
+  color: #555; /* Text color */
+}
 
-/* Grid Layout for Images in Activity Page*/
 
  
 /* accessibility page*/
