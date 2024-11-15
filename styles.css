@@ -58,6 +58,7 @@ body {
     padding: 0;
     margin: 0;
     text-align: center;
+    font-weight: bold;
   }
   
   nav ul li {
@@ -71,18 +72,13 @@ body {
   }
   /* Search Button */
   .search-container {
-    height: 100%; /* Matches the height of the header */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 10px; /* Adjust padding as desired */
   }
   
   .search-button {
-    background-color: white;
-    border: none;
-    width: 50px; /* Width of the square, adjust as needed */
-    height: 50px; /* Square dimensions, matching the header height */
+    background-color: #333;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,7 +89,6 @@ body {
 .search-button img {
   width: 30px; /* Adjust icon size */
   height: 30px;
-  margin-top: 8px;
 }
 
 
@@ -117,7 +112,7 @@ body {
     margin-top: 20px; /* Space above the image, adjust as needed */
   }
     
-  /* Flex wrapper to create the 70%-30% layout */
+  /* Flex wrapper to create the 70%-30% layout Index */
 .flex-wrapper {
   display: flex;
   max-width: 100%; /* Adjust as needed */
@@ -227,8 +222,9 @@ a:hover {
   padding: 10px;
 }
 
+
 .clickable-box {
-  background-color:  #333;/* Blue background for the clickable box */
+  background-color:  #333;/* background for the clickable box */
   color: rgba(255, 247, 0, 0.975);
   padding: 4px;
   margin-bottom: 5px;
@@ -265,43 +261,62 @@ a:hover {
 }
  /* END trying flex for main */
 
+/* flex Layout for Images in Activity Page*/
+
+
+.activity-page-wrapper .content-right .flex-item {
+  display: flex;
+  flex-direction: column; /* Stack the elements vertically */
+  align-items: center; /* Center items */
+  text-align: center;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+.activity-page-wrapper .content-right .flex-item a {
+  display: flex;
+  flex-direction: column; /* Stack image and h3 vertically */
+  align-items: center;
+  text-align: center;
+  border: 1px solid #333; /* Black border for the clickable area */
+  padding: 5px; /* Add spacing inside the box */
+  background-color: white; /* White background */
+  width: 90%;
+  height: 300px;
+  text-decoration: none; /* Remove underline from the link */
+  box-sizing: border-box; /* Include padding in width calculation */
+  transition: transform 0.2s, box-shadow 0.2s; /* Add transition for hover effects */
+}
+
+.activity-page-wrapper .content-right .flex-item a:hover {
+  transform: scale(1.05); /* Slightly enlarge the box on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.activity-page-wrapper .content-right .flex-item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.activity-page-wrapper .content-right .flex-item h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0; /* Remove default margin */
+}
+
+.activity-page-wrapper .content-right .flex-item .text-box {
+  margin: 40px;
+  font-size: 1rem;
+  color: #555;
+}
+
+
+
+
 /* Grid Layout for Images in Activity Page*/
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 20px;
-    justify-items: center;
-  }
-  
-  .grid-item {
-    text-align: center;
-    border: 1px solid #ddd;
-    padding: 10px;
-    background-color: #fff;
-  }
-  
-  .grid-item img {
-    width: 100%;
-    height: auto;
-    max-width: 300px;
-  }
-  
-  .grid-item h2 {
-    margin-top: 10px;
-    font-size: 1.5rem;
-    color: #333;
-  }
-  
-  .grid-item a {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .grid-item a:hover img {
-    opacity: 0.8;
-  }  
+ 
 /* accessibility page*/
 
   .image {
