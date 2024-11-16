@@ -293,9 +293,21 @@ a:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
 
-.activity-page-wrapper .content-right .flex-item img {
+/*.activity-page-wrapper .content-right .flex-item img {
   width: 100%;
   height: auto;
+  margin-bottom: 10px;
+}
+
+.activity-page-wrapper .content-right .flex-item h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0; /* Remove default margin */
+
+
+.activity-page-wrapper .content-right .flex-item img {
+  width: 85%;
+  height: 85%;
   margin-bottom: 10px;
 }
 
@@ -312,7 +324,7 @@ a:hover {
   margin-right: 30px;
   font-size: 1rem;
   color: #555;
-  text-align: left;
+  text-align: center;
 }
 
 .kart-container {
@@ -322,7 +334,7 @@ a:hover {
 
 .kart {
   display: block; /* Ensures the image is on its own line */
-  width: 750px; /* Adjust size for the logo */
+  width: 500px; /* Adjust size */
   height: auto; /* Maintain aspect ratio */
   margin: 0 auto; /* Center the image within the container */
 }
