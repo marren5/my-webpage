@@ -225,7 +225,7 @@ a:hover {
 
 .clickable-box {
   background-color:  #333;/* background for the clickable box */
-  color: #53BFB2;
+  color: #faef13;
   padding: 4px;
   margin-bottom: 5px;
   cursor: pointer;
@@ -263,14 +263,14 @@ a:hover {
 
 
 /* index page TABLE / ALL THE COURSES */
-.myTable, .myTable tr, .myTable td {
+.tableStudietsOppbygging, .tableStudietsOppbygging tr, .tableStudietsOppbygging td {
   font-family: Verdana, sans-serif;
   border: 1px solid black;
-  padding: 5px;
+  padding: 20px;
   text-align: center;
 }
-.myTable {
-  width: 80%;
+.tableStudietsOppbygging {
+  width: 100%;
   border-collapse: collapse;
   clear: both;
   border: 1px solid black;
@@ -281,18 +281,18 @@ a:hover {
 }
 
 .freeSubject {
-  background-color: #fbff0a;
-  width: 15%; /* */
+  background-color: rgb(114, 216, 206);
+  width: 15%; 
 }
 
 .oblig {
   background-color:#ffffff;
-  width: 15%; /*  */
+  width: 15%; 
 }
 .sisterad {
   width: 5%;
 }
-/**/
+
 a {
   color: #333(0, 0, 0);
   text-decoration: none;
@@ -314,7 +314,10 @@ a {
   background-color: #e0e0e0ef; /* Hover effect */
 }
 
+
+
 /*Index-Interesseliste kilder: https://www.w3schools.com/css/css_list.asp */
+
 .interessert-liste {
   font-family: Verdana, sans-serif;
   padding: 20px;
