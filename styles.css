@@ -211,7 +211,7 @@ a {
 a:hover {
   text-decoration: underline; /* Adds an underline when the link is hovered */
   text-decoration-thickness: 3px;
-  text-decoration-color: rgba(255, 221, 0, 0.85);
+  text-decoration-color: #53BFB2;
 
 }
 
@@ -225,7 +225,7 @@ a:hover {
 
 .clickable-box {
   background-color:  #333;/* background for the clickable box */
-  color: rgba(255, 247, 0, 0.975);
+  color: #53BFB2;
   padding: 4px;
   margin-bottom: 5px;
   cursor: pointer;
@@ -399,7 +399,7 @@ a:hover {
 }
 
 .freeSubject {
-  background-color: #fbff0a;
+  background-color: #53BFB2;
   width: 15%; /* */
 }
 
@@ -476,7 +476,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: left;
-  background-color: #ffd700;
+  background-color: #53BFB2;
   padding: 0px;
   font-family: sans-serif;
 }
@@ -496,6 +496,7 @@ a {
 .student-hist-right img{
   width: 100%;
   height: 300px;
+  position:-ms-page 
 }
 .nested-link {
   color: black;
@@ -506,7 +507,7 @@ a {
 }
 /*Index-footer*/
 .web-footer {
-  background-color: #ffd700; /* Yellow background */
+  background-color: #53BFB2; /* Yellow background */
   color: black; /* Text color */
   font-family: Verdana, sans-serif;
   padding: 70px 10%; /* Padding around the content for better spacing */
@@ -566,4 +567,12 @@ a {
 .footer-socialmedia img { /* Adjust icon size */
   width: 40px; 
   height: 40px;
+}
+.question-link{
+  text-decoration: underline;
+  color: black;
+  font-weight: bold;
+}
+.question-link:hover{
+  border-bottom: #53BFB2;
 }
