@@ -211,7 +211,7 @@ a {
 a:hover {
   text-decoration: underline; /* Adds an underline when the link is hovered */
   text-decoration-thickness: 3px;
-  text-decoration-color: rgba(255, 221, 0, 0.85);
+  text-decoration-color: #53BFB2;
 
 }
 
@@ -225,7 +225,7 @@ a:hover {
 
 .clickable-box {
   background-color:  #333;/* background for the clickable box */
-  color: rgba(255, 247, 0, 0.975);
+  color: #53BFB2;
   padding: 4px;
   margin-bottom: 5px;
   cursor: pointer;
