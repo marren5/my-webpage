@@ -357,15 +357,17 @@ a {
   transform: translateY(-50%);
 }
 /*Index-Studenthistorie*/
+
 .studentstory-box {
-  position: relative;
+  padding: 20px;
+  flex: 1; 
+  margin: 0; 
   display: flex;
-  justify-content: space-between;
-  align-items: left;
+  flex-direction: column; 
+  justify-content: center; 
   background-color: rgb(63, 190, 178);
-  padding: 0px;
-  font-family: sans-serif;
 }
+
 .student-hist-link {
   position: absolute;
   width: 90%;
@@ -534,7 +536,6 @@ a {
 }
 
 .text-box {
-  background-color: #53BFB2; 
   padding: 20px;
   flex: 1; 
   margin: 0; 
