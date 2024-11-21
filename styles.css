@@ -215,7 +215,7 @@ a:hover {
 
 }
 
-/* Right section taking up 30% */
+/* Right section taking up 40% */
 
 .content-right {
   flex: 0 0 40%;
@@ -292,18 +292,6 @@ a:hover {
   transform: scale(1.05); /* Slightly enlarge the box on hover */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
-
-/*.activity-page-wrapper .content-right .flex-item img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.activity-page-wrapper .content-right .flex-item h3 {
-  font-size: 1.2rem;
-  color: #333;
-  margin: 0; /* Remove default margin */
-
 
 .activity-page-wrapper .content-right .flex-item img {
   width: 85%;
