@@ -330,7 +330,7 @@ a:hover {
 .kart-text {
   margin-top: 5px; /* Add some small spacing between the image and text */
   font-size: 0.5rem; /* Adjust text size as needed */
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Verdana, sans-serif;
   color: #555; /* Text color */
 }
 
@@ -368,7 +368,7 @@ a:hover {
     bottom: 0;
     
   }
-/* table */
+/* index page table */
 .myTable, .myTable tr, .myTable td {
   font-family: Verdana, sans-serif;
   border: 1px solid black;
@@ -382,18 +382,17 @@ a:hover {
   border: 1px solid black;
 }
 
-
 .semester {
   width: 3%;
 }
 
 .freeSubject {
-  background-color: rgb(242, 242, 99);
+  background-color: #fbff0a;
   width: 15%; /* */
 }
 
 .oblig {
-  background-color: rgb(255, 255, 255);
+  background-color:#ffffff;
   width: 15%; /*  */
 }
 .sisterad {
@@ -401,6 +400,158 @@ a:hover {
 }
 /**/
 a {
-  color: rgb(0, 0, 0);
+  color: #333(0, 0, 0);
+  text-decoration: none;
+}
+
+.other-programms ul {
+  list-style: none;
+  padding: 0;
+}
+
+.other-programs li {
+  padding: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+  cursor: pointer; /* forteller oss at den er interactive */
+}
+
+.other-programs li:hover {
+  background-color: #e0e0e0ef; /* Hover effect */
+}
+/*Index-Interesseliste kilder: https://www.w3schools.com/css/css_list.asp */
+.interessert-liste {
+  font-family: Verdana, sans-serif;
+  padding: 20px;
+  width: 600px;
+}
+.interessert-liste h2{
+  color: #333;
+  margin-bottom: 20px;
+}
+.interessert-liste p{
+  font-weight: bold;
+  margin: 0%;
+}
+.interessert-liste ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.interessert-liste li{
+  background-color: #ffff;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  position: relative; 
+}
+.interessert-liste a{
+  color: #000;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+.interessert-liste a::after {
+  content:">";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/*Index-Studenthistorie*/
+.studentstory-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  background-color: #ffd700;
+  padding: 0px;
+  font-family: sans-serif;
+}
+.student-hist-link {
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  z-index: 0;
+}
+.student-hist-left {
+  width: 80%;
+  height: 100%;
+
+  z-index: 0;
+  overflow-y: auto;
+}
+.student-hist-right img{
+  width: 100%;
+  height: 300px;
+}
+.nested-link {
+  color: black;
+  text-decoration: none;
+}
+.nested-link:hover {
   text-decoration: underline;
+}
+/*Index-footer*/
+.web-footer {
+  background-color: #ffd700; /* Yellow background */
+  color: black; /* Text color */
+  font-family: Verdana, sans-serif;
+  padding: 70px 10%; /* Padding around the content for better spacing */
+  box-sizing: border-box; /* Ensures padding doesn't affect the width */
+  line-height: 2.0; 
+}
+.button {/*Shadow on hover button. Kilde: https://www.w3schools.com/css/css3_buttons.asp */
+  background-color: #000000;
+  border: none;
+  color: #ffffff;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 6px 2px;
+  cursor: pointer;
+} 
+.button:hover {
+  box-shadow: 0 10px 12px 0 rgba(0,0,0,0.24),0 10px 70px 0 rgba(0,0,0,0.19);
+}
+.newsletter a{/*no underline for the button*/
+  text-decoration: none;
+}
+.footer-content a:hover {/*Underline on all clickable text in the footer except the button*/
+  text-decoration: underline;
+}
+.footer-content a{/*bold letter on clickable text in the footer*/
+  font-weight: bold;
+  color: #171717;
+}
+.footer-divider {
+  border: none;
+  height: 1px;
+  background-color: #000000; /* Black line */
+  margin: 20px 0; /* Increased space around the line */
+}
+.footer-content {
+  display: flex; /* Ensures that the footer content is a flex container */
+  justify-content: space-between; /* Distributes space between footer-left, footer-middle and footer-socialmedia */
+  align-items: center; /* Centers it vertically */
+  text-align: left; /* Aligns the container to the left*/
+  white-space: nowrap;/*makes sure it doesnt wrap if the content is long https://www.w3schools.com/cssref/pr_text_white-space.php*/
+  margin: 0 5%; /* Margins on the side */
+  flex-grow: 1; /* Allows each section to grow equally */
+  margin: 0 20px; /* space between the sections */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  flex-basis: 40%; /* Footer containers change when i delete the flex-basis under!!!*/
+}
+.footer-left, .footer-middle {
+  flex-basis: 40%; /* sets the main size for footer-left and footer-middle */
+}
+.footer-socialmedia { /*icon placement*/
+  flex-basis: 40%; 
+  text-align: center; 
+}
+.footer-socialmedia img { /* Adjust icon size */
+  width: 40px; 
+  height: 40px;
 }
