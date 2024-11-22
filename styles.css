@@ -113,6 +113,7 @@ body {
   }
     
   /* Flex wrapper to create the 70%-30% layout Index */
+
 .flex-wrapper {
   display: flex;
   max-width: 100%; /* Adjust as needed */
@@ -122,9 +123,9 @@ body {
   box-sizing: border-box; 
 }
 
-/* Left section taking up 70% */
+/* Left section taking up 60% */
 .content-left {
-  flex: 0 0 70%;
+  flex: 0 0 60%;
   padding: 30px;
   background-color: #fff;
 }
@@ -216,20 +217,20 @@ a:hover {
 /* Right section taking up 40% */
 
 .content-right {
-  flex: 0 0 40%;
+  flex: 0 0 38%;
   padding: 10px;
 }
 
 
 .clickable-box {
   background-color:  #333;/* background for the clickable box */
-  color: #53BFB2;
+  color: rgb(232, 224, 0);
   padding: 4px;
   margin-bottom: 5px;
   cursor: pointer;
   border-radius: 0;
   text-align: center;
-  width: 85%; 
+  width: 70%; 
 }
 
 .clickable-box:hover {
@@ -243,7 +244,7 @@ a:hover {
   margin-top: 10px;
   border-radius: 5px;
   border: 1px solid #ddd;
-  width: 78%; 
+  width: 62%; 
   text-align: left;
   line-height: 2;
 }
@@ -268,7 +269,7 @@ a:hover {
   text-align: center;
 }
 .tableStudietsOppbygging {
-  width: 80%;
+  width: 100%;
   border-collapse: collapse;
   clear: both;
   border: 1px solid black;
@@ -278,6 +279,10 @@ a:hover {
 }
 .semester {
   width: 3%;
+  background-color:  rgb(195, 248, 243);
+}
+.studiepoeng {
+  background-color:  rgb(195, 248, 243);
 }
 
 .freeSubject {
@@ -497,20 +502,23 @@ a {
   font-family: Verdana, sans-serif;
   color: #555; /* Text color */
 }
+
 /*Studenthistorie tekst boks og bildet*/
+
 .content-container {
   display: flex;
   align-items: stretch; 
   width: 100%; 
 }
 
-.text-box {
+.Studenthistorie {
   padding: 20px;
   flex: 1; 
   margin: 0; 
   display: flex;
   flex-direction: column; 
   justify-content: center; 
+  background-color: rgb(114, 216, 206);
 }
 
 .text-box a {
