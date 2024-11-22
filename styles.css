@@ -124,7 +124,7 @@ body {
 
 /* Left section taking up 70% */
 .content-left {
-  flex: 0 0 60%;
+  flex: 0 0 70%;
   padding: 30px;
   background-color: #fff;
 }
