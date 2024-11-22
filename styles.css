@@ -124,7 +124,7 @@ body {
 
 /* Left section taking up 70% */
 .content-left {
-  flex: 0 0 60%;
+  flex: 0 0 70%;
   padding: 30px;
   background-color: #fff;
 }
@@ -153,7 +153,6 @@ th, td {
 th {
   font-weight: bold;
 }
-
 
 /* Styling for content within the left box */
 
@@ -184,7 +183,7 @@ th {
 
 /* Resize the contact image */
 .content-box.faglig-leder .contact-image {
-  width: 80px;  /* Resize the image */
+  width: 130px;  /* Resize the image */
   height: auto; /* Keep aspect ratio */
 }
 
@@ -194,12 +193,11 @@ th {
 }
 
 /* Optional: Style the table for better readability */
-.content-box.faglig-leder .contact-info th, 
-.content-box.faglig-leder .contact-info td {
-  padding: 5px 10px;  /* Add some padding */
-  text-align: left;    /* Align text to the left */
-}
 
+.content-box.faglig-leder h3, p{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: medium;
+}
 /* hyperlink to oslo met study */
 a {
   color: black; /* Blue color for the link */
@@ -225,7 +223,7 @@ a:hover {
 
 .clickable-box {
   background-color:  #333;/* background for the clickable box */
-  color: #faef13;
+  color: #53BFB2;
   padding: 4px;
   margin-bottom: 5px;
   cursor: pointer;
@@ -253,7 +251,7 @@ a:hover {
 /* Styling for content text */
 .content p {
   font-family: Verdana, sans-serif;
-  font-size: 1rem;
+  font-size: 2rem;
   color: #000;
   text-align: left;
   line-height: 2;
@@ -270,12 +268,14 @@ a:hover {
   text-align: center;
 }
 .tableStudietsOppbygging {
-  width: 100%;
+  width: 80%;
   border-collapse: collapse;
   clear: both;
   border: 1px solid black;
 }
-
+.tableStudietsOppbygging i{
+  font-weight: 600;
+}
 .semester {
   width: 3%;
 }
@@ -337,7 +337,7 @@ a {
   margin: 0;
 }
 .interessert-liste li{
-  background-color: #ffff;
+  background-color: #ffffff;
   margin-bottom: 10px;
   padding: 10px;
   border: 1px solid #ccc;
@@ -356,42 +356,11 @@ a {
   top: 50%;
   transform: translateY(-50%);
 }
-/*Index-Studenthistorie*/
-
-.studentstory-box {
-  padding: 20px;
-  flex: 1; 
-  margin: 0; 
-  display: flex;
-  flex-direction: column; 
-  justify-content: center; 
-  background-color: rgb(63, 190, 178);
+.interessert-liste li:hover {
+  transform: scale(1.05); 
+  transform-origin: center; 
 }
 
-.student-hist-link {
-  position: absolute;
-  width: 90%;
-  height: 100%;
-  z-index: 0;
-}
-.student-hist-left {
-  width: 80%;
-  height: 100%;
-
-  z-index: 0;
-  overflow-y: auto;
-}
-.student-hist-right img{
-  width: 100%;
-  height: 300px;
-}
-.nested-link {
-  color: black;
-  text-decoration: none;
-}
-.nested-link:hover {
-  text-decoration: underline;
-}
 /*Index-footer*/
 .web-footer {
   background-color: rgb(63, 190, 178); /* Yellow background */
@@ -452,8 +421,8 @@ a {
   text-align: center; 
 }
 .footer-socialmedia img { /* Adjust icon size */
-  width: 40px; 
-  height: 40px;
+  width: 50px; 
+  height: 50px;
 }
  
 /* flex Layout for Images in Activity Page*/
@@ -528,7 +497,7 @@ a {
   font-family: Verdana, sans-serif;
   color: #555; /* Text color */
 }
-
+/*Studenthistorie tekst boks og bildet*/
 .content-container {
   display: flex;
   align-items: stretch; 
@@ -570,7 +539,11 @@ a {
   transform: scale(1.05); 
   transform-origin: center; 
 }
-
+.content p{
+  font-size: medium;
+  color:#000000
+}
+.contact-image
 
 /* Accessibility page*/
 
