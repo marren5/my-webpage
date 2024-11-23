@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accessibility | My Website</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Logo" class="logo" />
+    <img src="images/logo1.png" alt="Logo1" class="logo1" />
+    <nav>
+      <ul>
+        <li><a href="index.html">Index</a></li>
+        <li><a href="about.html">Accessibility</a></li>
+        <li><a href="services.html">GitHub</a></li>
+        <li><a href="activity.html">Activity</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="activity-page-wrapper">
+
+      <div class="flex-wrapper">
+  
+        <div class="content-left">
+  
+          <div class="content-box">
+            
+             <article>
+              <h2>Universal design choices in project</h2>
+              <p>
+                When developing this project, the group focused on incorporating principles of universal 
+                design that were learned from the lectures and supplementary sources, to ensure that the website is accessible, user-friendly, and functional. 
+                Below we presented a short overview of the key coding choices we made to align with these goals.
+              </p>
+            </article>
+  
+          <!-- Horizontal line between content boxes -->
+  <hr class="content-divider">
+
+  <div class="content-box">
+    
+    <article>
+      <h2>Semantic HTML</h2>
+      <p>First of all, we prioritized semantic HTML elements, such as "header", "main", "section", and "footer" in order to structure the 
+        content logically. This approach improves the webpage's readability and makes it easier for users to navigate (and for developers to find bugs).
+        </p>
+
+      <p> Tables were also styled and designed with accessibility in mind. For example, we added 
+        proper "thead", "tbody", and "th" tags where appropriate, ensuring that the table content is clear for 
+        users. We find each table cell descriptive enough. However, while testing our website on Wave, we got alerts releted to table´s accessibility (see Figures below). Nevertheless, we find our tables representative and accessible.
+      </p>
+    </article>
+
+       <!-- Horizontal line between content boxes -->
+<hr class="content-divider">
+
+
+<div class="content-box">
+    
+  <article>
+    <h2>Accessible text and links</h2>
+        <p>
+          We used expected heading levels ("h1", "h2", etc.) to maintain a logical hierarchy.
+            Bold text was used to highlight essential information while maintaining a clean design.
+            For links, descriptive anchor text ensures users know what to expect when clicking. Additionally, 
+            links were styled to be visually distinct, this way improving accessibility for users. 
+      </article>
+
+<!-- Horizontal line between content boxes -->
+<hr class="content-divider">
+
+<div class="content-box">
+<article>
+  <h2>Flexibility</h2>
+      <p>
+        Initially we implemented grid layout for Activity page to create a responsive design that adapts to various screen sizes, but later changed that into flexbox layouts.
+        Both approaches ensure that content is accessible on desktops, laptops, phones, etc. We, however, found flex more convenient for our creative prospectives (but maybe, it was mostly related to our status as a "new beginner in coding").
+      </p>
+      <p>
+        Particularily, the layout in the main section divides the content into a 60/40 split, leaving room for future
+         additions without compromising the existing design. 
+        Images and text scale proportionally, maintaining usability across devices. </p>
+    </article>
+
+<!-- Horizontal line between content boxes -->
+<hr class="content-divider">
+
+
+<h2>Screenshot from the testing site (Wave)</h2>
+
+<img src="images/Wave3.png" alt="Logo" class="gitImage" />
+  <p class="kart-text"><i>Screenshot from the testing site # 1. Highlihts alerts related to tables.</i></p>
+
+  <br>
+
+  <img src="images/Wave2.png" alt="Logo" class="gitImage" />
+  <p class="kart-text"><i>Screenshot from the testing site (Wave) # 2. Comment: while taking this screenshot, we were not aware of the need to capture the code as well. But the problem was in empty link in container-box.</i></p>
+
+  <br>
+
+  <img src="images/Wave1.png" alt="Logo" class="gitImage" />
+  <p class="kart-text"><i>Screenshot from the testing site (Wave) # 3. Final check.</i></p>
+
+  <br>
+
+
+<!-- Horizontal line between content boxes -->
+<hr class="content-divider">
+
+  </main>
+
+
+
+
+<!-- Footer -->
+</main>
+<footer class="web-footer">
+  <div class="newsletter">
+    <h2> Hold deg oppdatert på hva som skjer på OsloMet.</h2>
+        <a href="https://www.oslomet.no/nyhetsbrev" class="button">Abonner på vårt nyhetsbrev</a>
+  </div>
+  <hr class="footer-divider" />
+  <div class="footer-content">
+    <div class="footer-left">
+      <img src="images/footer-oslomet.png" alt="Oslemet"><br>
+        Postboks 4, St. Olavs plass<br> <!--Line break. sourse https://www.w3schools.com/html/html_paragraphs.asp-->
+        0130 Oslo<br>
+        Tlf.: 67 23 50 00<br>
+        <a herf="https://www.oslomet.no/om/kontakt">Kontakt oss</a></p>
+    </div>
+    <hr>
+    <div class="footer-middle">
+    <a href="https://www.oslomet.no/en">English</a><br>
+      <a href="https://www.oslomet.no/alumni">Aliumni</a><br>
+      <a href="https://www.oslomet.no/om/ansatteoversikt">Ansatteoversikt</a><br>
+      <a href="https://www.oslomet.no/om/arrangement/arrangementsoversikt">Arrangementsoversikt</a><br>
+      <a href="https://www.oslomet.no/om/for-ansatte">For ansatte</a><br>
+      <a href="https://www.oslomet.no/om/for-studenter">For studenter</a><br>
+      <a href="https://www.oslomet.no/om/ledige-stillinger">Ledige stillinger</a><br>
+      <a href="https://www.oslomet.no/om/personvernerklering-informasjonskapslar">Personvernerklæring og informasjonskapslar</a><br>
+      <a href="https://www.oslomet.no/om/pressekontakt">Pressekontakt</a><br>
+      <a href="https://www.oslomet.no/om/tilgjengelegheitserklering">Tilgjengelegheitserklæring</a><br>
+      <a href="https://www-admin.oslomet.no/admin/view/content/58148">Admin</a><br>
+    </div>
+    <div class="footer-socialmedia">
+      <a href="https://www.facebook.com/oslomet/"><img src="images/icon-facebook.png" alt="Facebook"></a><br>
+      <a href="https://x.com/i/flow/login?redirect_after_login=%2Foslomet"><img src="images/icon-twitter.png" alt="X(Twitter)"></a><br>
+      <a href="https://no.linkedin.com/school/oslomet/"><img src="images/icon-linkedin.png" alt="LinkedIn"></a><br>
+      <a href="https://www.instagram.com/oslomet/?hl=nb"><img src="images/icon-instagram.png" alt="Instagram"></a>
+    </div>
+    </div>
+</footer>
+</body>
+</html>

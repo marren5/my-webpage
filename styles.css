@@ -575,6 +575,7 @@ a {
     color:#000;
   }
 
+
   footer {
     background-color: #333;
     color: #fff;
@@ -584,4 +585,25 @@ a {
     width: 100%;
     bottom: 0;
     
+  }
+
+  /* GitHub page*/
+
+  .gitImage-container {
+    display: inline-block; /* Keeps the image and text as a block element */
+    text-align: center; /* Centers the text under the image */
+  }
+  
+  .gitImage {
+    display: block; /* Ensures the image is on its own line */
+    width: 900px; /* Adjust size */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image within the container */
+  }
+  
+  .gitImage-text {
+    margin-top: 10px; /* Add some small spacing between the image and text */
+    font-size: 0.5rem; /* Adjust text size as needed */
+    font-family: Verdana, sans-serif;
+    color: #555; /* Text color */
   }
