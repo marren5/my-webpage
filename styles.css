@@ -10,6 +10,7 @@ body {
   flex-direction: column;            /* Stack all parts vertically */
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
+  overflow-x: hidden;
   }
 
                    /* Within header stuff */
