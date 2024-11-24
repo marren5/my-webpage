@@ -105,8 +105,8 @@ body {
   .flex-wrapper {
     display: flex; /* This creates a flexible layout */
     width: 100%;   /* Ensure it takes the full width */
-    gap: 20px;     /* Space between left and right sections */
-    padding: 20px; /* Add padding around the sections */
+    gap: 10px;     /* Space between left and right sections */
+    padding: 10px; /* Add padding around the sections */
     flex-wrap: wrap; /* **Added for responsiveness** */
     justify-content: space-between; /* Ensure even spacing between sections */
     box-sizing: border-box;
@@ -118,7 +118,7 @@ body {
 .content-left {
   flex: 1 1 60%; /* Flex-grow for responsiveness */
   max-width: 60%; /* Explicit maximum width */
-  padding: 10px;
+  padding: 1px;
   background-color: #fff;
   box-sizing: border-box;
   overflow: hidden;
@@ -180,18 +180,30 @@ th {
   max-width: 100%; /* Prevents boxes from exceeding the container width */
   padding: 5px;
   box-sizing: border-box;
+  margin: 0 auto; /* Center the box horizontally */
 }
 
 @media (max-width: 768px) {
   .content-box {
-    flex: 1 1 100%; /* Full width for small screens */
+    flex: 1 1 90%; /* Full width for small screens */
+    max-width: 90%; /* Prevent exceeding the screen */
+    margin: 0 auto; /* Center the box */
   }
+
+  /* For Ultra-Wide Screens */
+@media (min-width: 1440px) {
+  .content-box {
+    flex: 1 1 calc(50% - 20px); /* Adjust width for larger screens */
+    max-width: calc(50% - 20px); /* Prevent overflow */
+  }
+}
 }
 
 .content-box h2 {
   font-size: 1.5rem;
   color: #333;
   text-align: left; 
+  margin: 0;
 }
 
 
@@ -201,6 +213,7 @@ th {
   color:#000;
   text-align: left; 
   line-height: 2; /*  line spacing between paragraphs */
+  margin: 0;
 }
 
 /* INDEX PAGE Adjust faglig leder info */
@@ -347,9 +360,6 @@ a:hover {
     font-size: 0.9rem; /* Adjust text size */
   }
 
-  .content-box {
-    padding: 10px; /* Reduce padding for smaller screens */
-  }
 }
 
 @media (min-width: 1440px) {
@@ -357,9 +367,6 @@ a:hover {
     font-size: 1.2rem; /* Increase text size for larger screens */
   }
 
-  .content-box {
-    padding: 30px; /* Increase padding for wider screens */
-  }
 }
 
  /* END trying flex for clickable boxes */
