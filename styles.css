@@ -105,8 +105,8 @@ body {
   .flex-wrapper {
     display: flex; /* This creates a flexible layout */
     width: 100%;   /* Ensure it takes the full width */
-    gap: 10px;     /* Space between left and right sections */
-    padding: 10px; /* Add padding around the sections */
+    gap: 0;     /* Space between left and right sections */
+    padding: 5px; /* Add padding around the sections */
     flex-wrap: wrap; /* **Added for responsiveness** */
     justify-content: space-between; /* Ensure even spacing between sections */
     box-sizing: border-box;
@@ -123,6 +123,123 @@ body {
   box-sizing: border-box;
   overflow: hidden;
 }
+
+/* INDEX PAGE RIGHT SECTION taking up 40% */
+
+
+/* Content-right (box container) */
+.content-right {
+  flex: 1 1 40%;        /* Ensures it takes 40% of the width */
+  max-width: 40%; 
+  padding: 10px;
+  display: flex;
+  flex-direction: column; /* Stack the clickable boxes vertically */
+  gap: 10px;             /* Add space between boxes */
+  align-items: flex-start; /* Align boxes to the right */
+  box-sizing: border-box;
+  margin-left: auto;      /* Push content-right to the right */
+}
+
+/* Individual clickable boxes */
+.clickable-box {
+  background-color: #333;
+  color: rgb(232, 224, 0);
+  padding: 10px;
+  border-radius: 0;
+  text-align: center;
+  width: 100%; /* Full width of the parent container */
+  max-width: 100%; /* Optional: limit the width of each box */
+  margin: 0 auto;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.clickable-box:hover {
+  background-color: #334;
+  color: rgb(141, 241, 231);
+}
+
+.content {
+  display: none; /* Initially hide the content */
+}
+
+/* INDEX PAGE Styling for content text */
+
+.content p {
+  font-family: Verdana, sans-serif;
+  font-size: 2rem;
+  color: #000;
+  text-align: left;
+  line-height: 2;
+  line-height: 2;
+}
+
+                                 /* MEDIA For portrait and smaller devices */
+@media (max-width: 768px) {
+  header {
+    height: auto; /* Adjust height for smaller screens */
+    padding: 10px;
+    flex-wrap: wrap; /* Stack header elements */
+    text-align: center;
+  }
+
+  nav ul li {
+    display: block; /* Stack navigation items vertically */
+    margin: 10px 0;
+  }
+
+  .header-images {
+    position: static; /* Reset position for smaller screens */
+    transform: none;
+    margin-bottom: 10px;
+  }
+
+  .flex-wrapper {
+    flex-direction: column; /* Stack sections vertically */
+  }
+
+  .content-left,
+  .content-right {
+    flex: 1 1 100%; /* Take full width */
+    max-width: 100%; /* Remove the 60%-40% restriction */
+    padding: 10px; /* Add padding for spacing */
+  }
+  }
+
+  .content-right {
+    align-items: center; /* Center the boxes */
+  }
+
+  .clickable-box {
+    max-width: none; /* Allow full width for smaller screens */
+    width: 90%; /* Slight padding on smaller devices */
+  }
+
+
+               /* For ultra-wide screens */
+@media (min-width: 1440px) {
+  .content-left {
+    padding: 50px; /* Increase padding for larger screens */
+  }
+
+  .content-right {
+    padding: 20px;
+    align-items: flex-start; /* Align boxes to the right */
+  }
+}
+@media (max-width: 768px) {
+  body {
+    font-size: 0.9rem; /* Adjust text size */
+  }
+
+}
+
+@media (min-width: 1440px) {
+  body {
+    font-size: 1.2rem; /* Increase text size for larger screens */
+  }
+
+}
+
 
                                         /* LINE separator i e content divider */
  
@@ -256,118 +373,7 @@ a:hover {
 
 }
 
-/* INDEX PAGE RIGHT SECTION taking up 40% */
 
-
-/* Content-right (box container) */
-.content-right {
-  flex: 1 1 40%;        /* Ensures it takes 40% of the width */
-  max-width: 500px; 
-  padding: 10px;
-  display: flex;
-  flex-direction: column; /* Stack the clickable boxes vertically */
-  gap: 10px;             /* Add space between boxes */
-  align-items: flex-start; /* Align boxes to the right */
-  box-sizing: border-box;
-  margin-left: auto;      /* Push content-right to the right */
-}
-
-/* Individual clickable boxes */
-.clickable-box {
-  background-color: #333;
-  color: rgb(232, 224, 0);
-  padding: 10px;
-  border-radius: 0;
-  text-align: center;
-  width: 100%; /* Full width of the parent container */
-  max-width: 100%; /* Optional: limit the width of each box */
-  margin: 0 auto;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.clickable-box:hover {
-  background-color: #334;
-  color: rgb(141, 241, 231);
-}
-
-.content {
-  display: none; /* Initially hide the content */
-}
-
-/* INDEX PAGE Styling for content text */
-
-.content p {
-  font-family: Verdana, sans-serif;
-  font-size: 2rem;
-  color: #000;
-  text-align: left;
-  line-height: 2;
-  line-height: 2;
-}
-
-                                 /* MEDIA For portrait and smaller devices */
-@media (max-width: 768px) {
-  header {
-    height: auto; /* Adjust height for smaller screens */
-    padding: 10px;
-    flex-wrap: wrap; /* Stack header elements */
-    text-align: center;
-  }
-
-  nav ul li {
-    display: block; /* Stack navigation items vertically */
-    margin: 10px 0;
-  }
-
-  .header-images {
-    position: static; /* Reset position for smaller screens */
-    transform: none;
-    margin-bottom: 10px;
-  }
-
-  .flex-wrapper {
-    flex-direction: column; /* Stack sections vertically */
-  }
-
-  .content-left,
-  .content-right {
-    flex: 1 1 100%; /* Take full width */
-  }
-
-  .content-right {
-    align-items: center; /* Center the boxes */
-  }
-
-  .clickable-box {
-    max-width: none; /* Allow full width for smaller screens */
-    width: 90%; /* Slight padding on smaller devices */
-  }
-}
-
-               /* For ultra-wide screens */
-@media (min-width: 1440px) {
-  .content-left {
-    padding: 50px; /* Increase padding for larger screens */
-  }
-
-  .content-right {
-    padding: 20px;
-    align-items: flex-start; /* Align boxes to the right */
-  }
-}
-@media (max-width: 768px) {
-  body {
-    font-size: 0.9rem; /* Adjust text size */
-  }
-
-}
-
-@media (min-width: 1440px) {
-  body {
-    font-size: 1.2rem; /* Increase text size for larger screens */
-  }
-
-}
 
  /* END trying flex for clickable boxes */
 
@@ -375,8 +381,7 @@ a:hover {
 /* INDEX PAGE  TABLE / ALL THE COURSES */
 .table-wrapper {
   width: 100%; /* Ensure it fits the content-left section */
-  max-width: 100%; /* Restrict to its container */
-  margin: 0 auto; /* Center the table within the wrapper */
+  margin: 10 auto; /* Center the table within the wrapper */
   box-sizing: border-box; /* Include padding and borders in width calculations */
   overflow-x: auto; /* Add horizontal scroll for smaller screens if needed */
 }
@@ -397,7 +402,6 @@ a:hover {
   border: 1px solid black;
   box-sizing: border-box;
   margin: 20px 0; /* Space above and below the table */
-  table-layout: fixed;
 }
 .tableStudietsOppbygging i{
   font-weight: 600;
