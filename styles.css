@@ -7,12 +7,33 @@ html, body {
 
 body {
   display: flex;                    /* flexbox layout now */
-  flex-direction: column;            /* Stack all parts vertically */
+  flex-direction: column;            /* Stack all parts vertically ang flex */
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   }
 
-                   /* Within header stuff */
+                              /* RESPONSIVENESS++.*/
+
+  @media (max-width: 768px) {
+    body {
+      font-size: 0.9rem; /* Adjust text size */
+    }
+  }
+  
+  @media (min-width: 1440px) {
+    body {
+      font-size: 1.2rem; /* Increase text size for larger screens */
+    }
+  }
+
+  main {
+    flex: 1;        /* grows and takes space */
+    padding: 10px;
+    text-align: left; 
+  }
+  
+
+                                  /* HEADER++ */  
   
   header {
     background-color: #333;
@@ -21,21 +42,21 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;              /* positioning for the logo */
-    height: auto;                  /* Adjust  header height  */
+    position: relative;              
+    height: auto;                
     flex-wrap: wrap;
   }
   .header-images {
     display: inline-block;       /* images inlined */
     position: static;
     margin-bottom: 10px;
-    text-align: center; /* Center align for smaller screens */
-    flex-basis: 100%; /* Take full width */
+    text-align: center;       
+    flex-basis: 100%;       
   }
   .logo {
     width: 80px; 
     height: auto;           /* keep ratio */
-    margin-right: 10px;  /* Space between the logo and OsloMet name image */
+    margin-right: 10px;   /* Space between the logo and OsloMet name image */
   }
   
   .logo1 {
@@ -93,7 +114,11 @@ body {
   width: 30px; 
   height: 30px;
 }
-/* RESPONSIVE HEADER STYLING */
+
+
+/* RESPONSIVE HEADER STYLING. Adds media queries for responsiveness. Taken from w3schools.com */
+
+
 @media (max-width: 768px) {
   header {
     flex-direction: column; /* Stack header elements vertically */
@@ -120,56 +145,49 @@ body {
   }
 }
 
-  main {
-    flex: 1;        /* Allow to grow and take available space */
-    padding: 10px;
-    text-align: left; 
-  }
-
-                                   /* COMMON THINGS  */
 
     
-  /* Flex wrapper to create the 60%-40% layout */
+                                 /* FLEX FLEX FLEX FLEX FLEX */ 
+
+                        /*Flex wrapper to create the 60%-40% layout */
 
   .flex-wrapper {
-    display: flex; /* This creates a flexible layout */
-    width: 100%;   /* Ensure it takes the full width */
-    gap: 0;     /* Space between left and right sections */
-    padding: 5px; /* Add padding around the sections */
-    flex-wrap: wrap; /* **Added for responsiveness** */
-    justify-content: space-between; /* Ensure even spacing between sections */
+    display: flex; 
+    width: 100%;   /* full width */
+    gap: 0;     /* space between left and right sections */
+    padding: 5px; /* space around the sections */
+    flex-wrap: wrap; /* responsiveness++ */
+    justify-content: space-between; /* even spacing between sections */
     box-sizing: border-box;
-    align-items: flex-start;
+    align-items: flex-start; 
   }
 
-/* Left section taking up 60% */
+                                /* Left section taking up 60% */
 
 .content-left {
-  flex: 1 1 60%; /* Flex-grow for responsiveness */
-  max-width: 60%; /* Explicit maximum width */
+  flex: 1 1 60%; /* responsiveness++ */
+  max-width: 60%; /* specified maximum width */
   padding: 1px;
   background-color: #fff;
   box-sizing: border-box;
   overflow: hidden;
 }
 
-/* INDEX PAGE RIGHT SECTION taking up 40% */
+                                /* Right section taking up 40% */
 
-
-/* Content-right (box container) */
 .content-right {
-  flex: 1 1 40%;        /* Ensures it takes 40% of the width */
+  flex: 1 1 40%;       
   max-width: 40%; 
   padding: 10px;
   display: flex;
-  flex-direction: column; /* Stack the clickable boxes vertically */
-  gap: 10px;             /* Add space between boxes */
-  align-items: flex-start; /* Align boxes to the right */
+  flex-direction: column;   /* stack clickable boxes osv. vertically */
+  gap: 10px;             /* space between boxes */
+  align-items: flex-start; /* align boxes to the right */
   box-sizing: border-box;
-  margin-left: auto;      /* Push content-right to the right */
+  margin-left: auto;      
 }
 
-/* Individual clickable boxes */
+                           /* INDEX PAGE Clickable boxes */
 .clickable-box {
   background-color: #333;
   color: rgb(232, 224, 0);
@@ -190,9 +208,6 @@ body {
 .content {
   display: none; /* Initially hide the content */
 }
-
-/* INDEX PAGE Styling for content text */
-
 .content p {
   font-family: Verdana, sans-serif;
   font-size: 2rem;
@@ -201,27 +216,10 @@ body {
   line-height: 2;
   line-height: 2;
 }
+/* RESPONSIVENESS++. Adds media queries for responsiveness. Taken from w3schools.com */
 
-                                 /* MEDIA For portrait and smaller devices */
 @media (max-width: 768px) {
-  header {
-    height: auto; /* Adjust height for smaller screens */
-    padding: 10px;
-    flex-wrap: wrap; /* Stack header elements */
-    text-align: center;
-  }
-
-  nav ul li {
-    display: block; /* Stack navigation items vertically */
-    margin: 10px 0;
-  }
-
-  .header-images {
-    position: static; /* Reset position for smaller screens */
-    transform: none;
-    margin-bottom: 10px;
-  }
-
+  
   .flex-wrapper {
     flex-direction: column; /* Stack sections vertically */
   }
@@ -233,50 +231,25 @@ body {
     padding: 10px; /* Add padding for spacing */
   }
   }
-
-  .content-right {
-    align-items: center; /* Center the boxes */
+  @media (min-width: 1440px) {
+    .content-left {
+      padding: 50px; /* Increase padding for larger screens */
+    }
+  
+    .content-right {
+      padding: 20px;
+      align-items: flex-start; /* Align boxes to the right */
+    }
   }
 
-  .clickable-box {
-    max-width: none; /* Allow full width for smaller screens */
-    width: 90%; /* Slight padding on smaller devices */
-  }
-
-
-               /* For ultra-wide screens */
-@media (min-width: 1440px) {
-  .content-left {
-    padding: 50px; /* Increase padding for larger screens */
-  }
-
-  .content-right {
-    padding: 20px;
-    align-items: flex-start; /* Align boxes to the right */
-  }
-}
-@media (max-width: 768px) {
-  body {
-    font-size: 0.9rem; /* Adjust text size */
-  }
-
-}
-
-@media (min-width: 1440px) {
-  body {
-    font-size: 1.2rem; /* Increase text size for larger screens */
-  }
-
-}
-
-
-                                        /* LINE separator i e content divider */
+                      /* LINE separator i e content divider */
  
  .content-divider {
   border: none;             /* Remove default border */
   border-top: 2px solid #13786f;  /* Define the line's style, thickness, and color */
   margin: 20px 0;           /* Space around the line */
   width: 100%;              /* Set width to fit the container */
+                                       
 }
 
                                                   /* INDEX PAGE  */
@@ -285,14 +258,14 @@ body {
   /* INDEX PAGE First image (INTRO) Source: Harvard.edu  */
 
   .image-container {
-    width: 100%;         /* Full width of the MAIN area */
+    width: 100%;         /* full width of the MAIN area */
     max-width: 1200px; 
     margin: 0 auto;        /*  container is centered */
   }
 
   .IndexBilde1 {
     width: 100%;      /* full width of the container */
-    height: auto;      /*  ratio */
+    height: auto;       /* keep ratio */
     max-height: 400px; 
     object-fit: cover; /* covers the width without distortion */
     margin-top: 20px; 
@@ -319,7 +292,7 @@ th {
 }
 
 
-/* INDEX PAGE Styling for content within the LEFT BOX */
+/* INDEX PAGE Styling for CONTENT BOX within the LEFT BOX */
 
 .content-box {
   flex: 1 1 calc(50% - 20px)x; /* Flex-grow, flex-shrink, and base size */
@@ -329,29 +302,12 @@ th {
   margin: 0 auto; /* Center the box horizontally */
 }
 
-@media (max-width: 768px) {
-  .content-box {
-    flex: 1 1 90%; /* Full width for small screens */
-    max-width: 90%; /* Prevent exceeding the screen */
-    margin: 0 auto; /* Center the box */
-  }
-
-  /* For Ultra-Wide Screens */
-@media (min-width: 1440px) {
-  .content-box {
-    flex: 1 1 calc(50% - 20px); /* Adjust width for larger screens */
-    max-width: calc(50% - 20px); /* Prevent overflow */
-  }
-}
-}
-
 .content-box h2 {
   font-size: 1.5rem;
   color: #333;
   text-align: left; 
   margin: 0;
 }
-
 
 .content-box p {
   font-family: Verdana, sans-serif;
@@ -362,24 +318,41 @@ th {
   margin: 0;
 }
 
+/* RESPONSIVENESS++. */
+
+@media (max-width: 768px) {
+  .content-box {
+    flex: 1 1 90%;  /* allow full width for small screens */
+    max-width: 90%; /* no exceeding the screen */
+    margin: 0 auto; /* center the box */
+  }
+
+@media (min-width: 1440px) {
+  .content-box {
+    flex: 1 1 calc(50% - 20px); 
+    max-width: calc(50% - 20px); /* no overflow */
+  }
+}
+}
+
+
 /* INDEX PAGE Adjust faglig leder info */
 
-/* Style for the contact container to align image and text horizontally */
 .content-box.faglig-leder .contact-container {
   display: flex;
-  align-items: center; /* Vertically align image and text */
-  gap: 20px; /* Space between the image and contact info */
+  align-items: center; 
+  gap: 20px; /*  between the image and contact info */
 }
 
-/* Resize the contact image */
+
 .content-box.faglig-leder .contact-image {
   width: 130px;  
-  height: auto; /* Keep aspect ratio */
+  height: auto; 
 }
 
-/* Style for the contact info */
+
 .content-box.faglig-leder .contact-info table { 
-  flex-grow: 1; /* Allow the text to grow within the available space */
+  flex-grow: 1; /* grow!!!*/
 }
 
 
@@ -388,25 +361,27 @@ th {
   font-size: medium;
 }
 
-/* Responsive Adjustments for Small Screens */
+/* RESPONSIVENESS++. INDEX FAG LEDER*/
+
 @media (max-width: 768px) {
   .contact-container {
-    flex-direction: column; /* Stack elements vertically */
-    align-items: flex-start; /* Align items to the left */
-    gap: 10px; /* Reduce spacing */
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 10px;
   }
 
   .contact-image {
-    width: 100px; /* Smaller image width for small screens */
+    width: 100px; /* smaller image */
   }
 
   .contact-info h3, 
   .contact-info p {
-    font-size: 0.9rem; /* Slightly smaller font size */
+    font-size: 0.9rem; 
   }
 }
 
 /* INDEX PAGE hyperlink to oslo met study */
+
 a {
   color: black; 
   text-decoration: underline; 
@@ -418,20 +393,16 @@ a:hover {
   text-decoration: underline;  /* when the link is hovered */
   text-decoration-thickness: 3px;
   text-decoration-color: #53BFB2;
-
 }
 
 
-
- /* END trying flex for clickable boxes */
-
-
 /* INDEX PAGE  TABLE / ALL THE COURSES */
+
 .table-wrapper {
-  width: 100%; /* Ensure it fits the content-left section */
-  margin: 10 auto; /* Center the table within the wrapper */
-  box-sizing: border-box; /* Include padding and borders in width calculations */
-  overflow-x: auto; /* Add horizontal scroll for smaller screens if needed */
+  width: 100%; /* fits the content-left section */
+  margin: 10 auto; /* center within the wrapper */
+  box-sizing: border-box; 
+  overflow-x: auto; /* horizontal scroll  */
 }
 
 .tableStudietsOppbygging, .tableStudietsOppbygging tr, .tableStudietsOppbygging td {
@@ -449,7 +420,7 @@ a:hover {
   clear: both;
   border: 1px solid black;
   box-sizing: border-box;
-  margin: 20px 0; /* Space above and below the table */
+  margin: 20px 0; /* space above and below the table */
 }
 .tableStudietsOppbygging i{
   font-weight: 600;
@@ -496,37 +467,36 @@ a {
   background-color: #e0e0e0ef; /* Hover effect */
 }
 
-/* Responsive Design */
+/* RESPONSIVENESS++. TABELLENE ALL COURSES*/
 
-/* Small Screens */
+
 @media (max-width: 768px) {
   .table-wrapper {
-    overflow-x: auto; /* Allow horizontal scrolling */
+    overflow-x: auto; 
   }
 
   .tableStudietsOppbygging {
-    font-size: 0.8rem; /* Reduce font size for smaller screens */
+    font-size: 0.8rem; 
   }
 
   .tableStudietsOppbygging tr,
   .tableStudietsOppbygging td {
-    padding: 8px; /* Reduce padding for compactness */
+    padding: 8px; 
   }
 }
 
-/* Ultra-Wide Screens */
 @media (min-width: 1440px) {
   .content-left {
-    padding: 40px; /* Add more padding for ultra-wide screens */
+    padding: 40px; 
   }
 
   .tableStudietsOppbygging {
-    font-size: 1.2rem; /* Increase font size for better readability */
+    font-size: 1.2rem; 
   }
 
   .tableStudietsOppbygging tr,
   .tableStudietsOppbygging td {
-    padding: 20px; /* Add padding for larger screens */
+    padding: 20px; 
   }
 }
 
@@ -561,9 +531,9 @@ a {
 
 .image-container {
   flex: 1; 
-  display: flex; /* Ensures content is centered */
-  justify-content: center; /* Center the image horizontally */
-  align-items: center; /* Center the image vertically */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
 }
 
 
@@ -583,23 +553,24 @@ a {
   color:#000000
 }
 
-/* Responsive Adjustments for Small Screens */
+/* RESPONSIVENESS++. Studiehistorie*/
+
 @media (max-width: 768px) {
   .content-container {
-    flex-direction: column; /* Stack elements vertically */
-    align-items: flex-start; /* Align items to the left */
+    flex-direction: column; 
+    align-items: flex-start; 
   }
 
   .Studenthistorie, 
   .image-container {
-    flex: 1 1 100%; /* Take full width on small screens */
-    max-width: 100%; /* Remove width constraints */
-    text-align: center; /* Center-align content */
+    flex: 1 1 100%; 
+    max-width: 100%; 
+    text-align: center; 
   }
 
   .image-container img {
-    width: 90%; /* Ensure the image doesn't exceed container width */
-    margin: 0 auto; /* Center the image */
+    width: 90%; 
+    margin: 0 auto; 
   }
 }
 
@@ -615,8 +586,8 @@ a {
 .interessert-liste h2{
   color: #333;
   margin-bottom: 20px;
-  font-size: 1.5rem; /* Make font size scalable */
-  text-align: left; /* Align text for larger screens */
+  font-size: 1.5rem; 
+  text-align: left; 
 }
 .interessert-liste p{
   font-weight: bold;
@@ -654,29 +625,29 @@ a {
   transform: scale(1.05); 
   transform-origin: center; 
 }
-/* Responsive Design for Smaller Screens */
+        /* RESPONSIVENESS++. Tnteressert Links*/
 @media (max-width: 768px) {
   .interessert-liste {
-    padding: 10px; /* Reduce padding for smaller screens */
-    text-align: center; /* Center-align content for smaller screens */
+    padding: 10px; 
+    text-align: center; 
   }
 
   .interessert-liste h2 {
-    font-size: 1.2rem; /* Reduce font size */
-    text-align: center; /* Center-align heading */
+    font-size: 1.2rem; 
+    text-align: center; 
   }
 
   .interessert-liste li {
-    padding: 8px; /* Reduce padding for list items */
+    padding: 8px; /
   }
 
   .interessert-liste a {
-    font-size: 0.9rem; /* Reduce font size for links */
+    font-size: 0.9rem; 
   }
 
   .interessert-liste a::after {
-    content: ">"; /* Keep the arrow icon */
-    right: 5px; /* Adjust spacing for smaller screens */
+    content: ">";
+    right: 5px; 
   }
 }
 
@@ -698,7 +669,7 @@ a {
   flex-direction: column; /*  image and h3 vertically */
   align-items: center;
   text-align: center;
-  border: 1px solid #333; /* Black border for the clickable area */
+  border: 1px solid #333; /* black border for the clickable area */
   padding: 5px; /* spacing inside the box */
   background-color: white; 
   width: 90%;
@@ -710,14 +681,14 @@ a {
 
 .activity-page-wrapper .content-right .flex-item a:hover {
   transform: scale(1.05); /* enlarge the box on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /*  shadow on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .activity-page-wrapper .content-right .flex-item img {
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
-  object-fit: contain; /* Ensure the entire image fits within the container */
+  object-fit: contain; /*  entire image fits within the container */
 }
 
 .activity-page-wrapper .content-right .flex-item h3 {
@@ -738,7 +709,7 @@ a {
 
 .kart-container {
   display: flex;
-  flex-wrap: wrap; /* Keeps the image and text as a block element stacking*/
+  flex-wrap: wrap; /* image and text as a block element stacking*/
   gap: 20px;
   justify-content: space-between;
 }
@@ -762,37 +733,40 @@ a {
   color: #555; 
 }
 
-/* Responsive Design */
+/* RESPONSIVENESS++. ACTIVITY page IMAGES and text*/
 @media (max-width: 768px) {
   .content-box {
-    padding: 15px; /* Reduce padding for smaller screens */
-    margin: 5px auto; /* Adjust margins */
+    padding: 15px; 
+    margin: 5px auto; 
   }
 
   .kart-container {
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center-align stacked content */
+    flex-direction: column; 
+    align-items: center; 
   }
 
   .kart {
-    max-width: 100%; /* Take up full width on small screens */
+    max-width: 100%; 
     flex: 1 1 100%;
   }
 
   .kart-text {
-    font-size: 0.9rem; /* Reduce font size for smaller screens */
+    font-size: 0.9rem; 
      text-align: center;
   }
 }
 
-                                            /* ACCESSIBILITY PAGE*/
+                                            /* ACCESSIBILITY and GIT PAGEs*/
 
 .gitImage {
-  display: block; /* Ensures the image behaves like a block-level element */
-  max-width: 100%; /* Prevents the image from exceeding the container width */
-  height: auto; /* Maintains the aspect ratio */
-  margin: 20px auto; /* Centers the image within the content box */
+  display: block; 
+  max-width: 100%; 
+  height: auto; 
+  margin: 20px auto; 
 }
+
+/* RESPONSIVENESS++. ACESS and GIT page, Images*/
+
 @media (max-width: 768px) {
   .gitImage{
   display: block;
@@ -802,23 +776,6 @@ a {
 }
 }
 
-
-
-/* Responsive Design for Small Screens */
-
-
-  
-
-
-
-
-                                            /* GitHub PAGE*/
-
-
-  
- 
-  
-  
 
                                               /*FOOTER*/
 
@@ -848,7 +805,7 @@ a {
 .newsletter a{/*no underline for the button*/
   text-decoration: none;
 }
-.footer-content a:hover {/*Underline on all clickable text in the footer except the button*/
+.footer-content a:hover {/*underline on all clickable text in the footer except the button*/
   text-decoration: underline;
 }
 .footer-content a{/*bold letter on clickable text in the footer*/
@@ -878,7 +835,7 @@ a {
   max-width: 30%;
 }
 
-.footer-socialmedia img { /* Adjust icon size */
+.footer-socialmedia img { /* adjust icon size */
   width: 50px; 
   height: 50px;
 }
@@ -894,28 +851,28 @@ footer {
   
   
 }
-/* Responsive Design for Smaller Screens */
+                                /* RESPONSIVENESS++. FOOTER*/
 @media (max-width: 768px) {
   .web-footer {
-    padding: 20px 5%; /* Reduce padding for smaller screens */
+    padding: 20px 5%; 
   }
 
   .footer-content {
-    flex-direction: column; /* Stack sections vertically */
-    align-items: center; /* Center align stacked sections */
-    gap: 15px; /* Add spacing between stacked sections */
-    text-align: center; /* Center align text */
+    flex-direction: column; 
+    align-items: center; 
+    gap: 15px; 
+    text-align: center; 
   }
 
   .footer-left,
   .footer-middle,
   .footer-socialmedia {
-    flex-basis: 100%; /* Make each section take full width */
-    max-width: 100%; /* Prevent sections from exceeding width */
+    flex-basis: 100%; 
+    max-width: 100%; 
   }
 
   .footer-socialmedia img {
-    width: 40px; /* Slightly smaller icons for smaller screens */
+    width: 40px; 
     height: 40px;
   }
 }
