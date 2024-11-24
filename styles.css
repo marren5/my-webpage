@@ -176,10 +176,16 @@ th {
 /* INDEX PAGE Styling for content within the LEFT BOX */
 
 .content-box {
-  flex: 1 1 300px; /* Flex-grow, flex-shrink, and base size */
+  flex: 1 1 calc(50% - 20px)x; /* Flex-grow, flex-shrink, and base size */
   max-width: 100%; /* Prevents boxes from exceeding the container width */
   padding: 5px;
   box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .content-box {
+    flex: 1 1 100%; /* Full width for small screens */
+  }
 }
 
 .content-box h2 {
@@ -336,7 +342,25 @@ a:hover {
     align-items: flex-start; /* Align boxes to the right */
   }
 }
+@media (max-width: 768px) {
+  body {
+    font-size: 0.9rem; /* Adjust text size */
+  }
 
+  .content-box {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    font-size: 1.2rem; /* Increase text size for larger screens */
+  }
+
+  .content-box {
+    padding: 30px; /* Increase padding for wider screens */
+  }
+}
 
  /* END trying flex for clickable boxes */
 
